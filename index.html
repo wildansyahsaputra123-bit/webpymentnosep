@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DANZZ NOSEPP GANTENG - Payment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background-color: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .header {
+            background: linear-gradient(to right, #2575fc, #6a11cb);
+            color: white;
+            padding: 25px 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .payment-container {
+            padding: 25px 20px;
+        }
+        
+        .payment-method {
+            margin-bottom: 25px;
+        }
+        
+        .payment-method h2 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .method {
+            background-color: #f8f9fa;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .method h3 {
+            font-size: 16px;
+            color: #2575fc;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .method h3 i {
+            margin-right: 10px;
+        }
+        
+        .method p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        
+        .qris-code {
+            text-align: center;
+            margin: 15px 0;
+            padding: 10px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .qris-code img {
+            max-width: 200px;
+            border-radius: 10px;
+        }
+        
+        .dana-number {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 15px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .dana-number p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .dana-number h4 {
+            font-size: 18px;
+            color: #2575fc;
+            margin: 10px 0;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(to right, #2575fc, #6a11cb);
+            color: white;
+            box-shadow: 0 4px 10px rgba(37, 117, 252, 0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(37, 117, 252, 0.5);
+        }
+        
+        .btn-secondary {
+            background-color: #f8f9fa;
+            color: #2575fc;
+            border: 1px solid #2575fc;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #e9ecef;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #999;
+            font-size: 12px;
+            border-top: 1px solid #eee;
+        }
+        
+        .instruction {
+            font-size: 13px;
+            color: #666;
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            line-height: 1.5;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 5px 10px;
+            background: linear-gradient(to right, #2575fc, #6a11cb);
+            color: white;
+            border-radius: 50px;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>DANZZ NOSEPP GANTENG</h1>
+            <p>WEBSITE PAYMENT</p>
+        </div>
+        
+        <div class="payment-container">
+            <div class="payment-method">
+                <h2>METODE PEMBAYARAN</h2>
+                
+                <div class="method">
+                    <h3><i class="fas fa-qrcode"></i> QRIS <span class="badge">Rekomendasi</span></h3>
+                    <p>Scan QRIS untuk bayar langsung via aplikasi dompet digital / m-banking.</p>
+                    
+                    <div class="qris-code">
+                        <img src="https://files.catbox.moe/m5lmxv.jpeg" alt="QR Code">
+                    </div>
+                    
+                    <button class="btn btn-primary" id="showQrBtn">
+                        Tampilkan QR
+                    </button>
+                </div>
+                
+                <div class="method">
+                    <h3><i class="fas fa-wallet"></i> Dana</h3>
+                    <p>Kirim sesuai tagihan lalu konfirmasi bukti transfer.</p>
+                    
+                    <div class="dana-number">
+                        <p>Nomor DANA</p>
+                        <h4 id="danaNumber">083192806229</h4>
+                        <p>a.n. DANZZ NOSEPP</p>
+                    </div>
+                    
+                    <button class="btn btn-secondary" id="copyNumberBtn">
+                        Salin Nomor
+                    </button>
+                </div>
+                
+                <div class="instruction">
+                    <p><strong>Instruksi Pembayaran:</strong> Setelah melakukan pembayaran, harap screenshoot bukti transfer dan kirimkan melalui WhatsApp ke nomor yang tertera.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 DANZZ NOSEPP GANTENG • Halaman sederhana & elegant</p>
+        </div>
+    </div>
+
+    <script>
+        // Fungsi untuk menyalin nomor DANA
+        document.getElementById('copyNumberBtn').addEventListener('click', function() {
+            const danaNumber = document.getElementById('danaNumber').textContent;
+            navigator.clipboard.writeText(danaNumber).then(() => {
+                // Mengubah teks button sementara
+                const originalText = this.textContent;
+                this.textContent = 'Tersalin!';
+                this.style.background = '#28a745';
+                this.style.color = 'white';
+                
+                setTimeout(() => {
+                    this.textContent = originalText;
+                    this.style.background = '';
+                    this.style.color = '';
+                }, 2000);
+            }).catch(err => {
+                console.error('Gagal menyalin teks: ', err);
+                alert('Gagal menyalin nomor. Silakan salin secara manual.');
+            });
+        });
+        
+        // Fungsi untuk menampilkan QR Code dalam modal (bisa dikembangkan)
+        document.getElementById('showQrBtn').addEventListener('click', function() {
+            alert('QR Code ditampilkan dalam ukuran penuh. Silakan scan untuk pembayaran.');
+            // Di sini bisa ditambahkan modal untuk menampilkan QR code lebih besar
+        });
+        
+        // Animasi untuk elemen saat dimuat
+        document.addEventListener('DOMContentLoaded', function() {
+            const methods = document.querySelectorAll('.method');
+            methods.forEach((method, index) => {
+                method.style.opacity = '0';
+                method.style.transform = 'translateY(20px)';
+                method.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                
+                setTimeout(() => {
+                    method.style.opacity = '1';
+                    method.style.transform = 'translateY(0)';
+                }, 100 + (index * 200));
+            });
+        });
+    </script>
+</body>
+</html>
